@@ -10,7 +10,9 @@ const eventRoutes = require('./routes/events');
 const bookingRoutes = require('./routes/booking');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "event-mora.vercel.app"
+}));
 app.use(express.json());
 
 
